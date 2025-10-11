@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  align-items: center; 
+  background: #111;
+  padding: 1em; 
+  width: 100%;  /* faz a barra preencher toda a largura */
+  height: 60px; /* altura fixa */
+  position: fixed; /* opcional: fixa no topo da tela */
+
+}
+
+.topBar {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 0.7em;
+  justify-content: center;
+}
+
+.siteName {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;       /* exibe os itens em flex */
+  align-items: center; 
+  flex: 2;
+  justify-content: center; 
+}
+
+.item {
+  margin-right: 2em;
+  width: 100%;
+
+}
+
+.item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.item a:hover {
+  color: #ffbb33;
+}
+
+.actions {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+.loginButton { 
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 70px;
+  margin: 10px;
+  height: 100%;
+  background: #ffbb33;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #fca311;     /* nova cor ao passar o mouse */
+}
+
+
+
+/* @media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 1em 0.5em;
+  }
+  .topBar {
+    justify-content: center;
+    margin-bottom: 0.5em;
+  }
+  .navLinks {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5em;
+    margin: 0.5em 0 0 0;
+  }
+  .search {
+    min-width: 80px;
+    max-width: 120px;
+    flex: 1;
+  }
+  .loginButton {
+    width: 60px;
+    height: 24px;
+    font-size: 0.95em;
+    padding: 0.2em 0.3em;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.5em 0.2em;
+  }
+  .siteName {
+    font-size: 1.1em;
+  }
+  .navLinks {
+    gap: 0.2em;
+  }
+  .actions {
+    gap: 0.2em;
+  }
+} */
