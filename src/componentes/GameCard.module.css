@@ -7,13 +7,15 @@
 
 .cards {
     width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding-right: 40px;
     padding-left: 40px;
     display: flex;
-    box-sizing: border-box;
     flex-wrap: wrap;
     gap: 15px;
-    justify-content: space-between;
+    justify-content: flex-start;
+    
     
     
 }
@@ -24,6 +26,11 @@
     width: 200px;
     height: auto;
     padding: 16px;
+
+    flex: 1 1 250px; /* flex-grow, flex-shrink, flex-basis */
+      min-width: 250px;
+      max-width: 300px;
+    
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -45,9 +52,12 @@
 .title {
     font-size: 1.5rem;
     margin: 12px 0 8px;
+    text-align: center;
+    
 }
 
 .description {
     font-size: 1rem;
     color: #666;
+    text-align: center;
 }

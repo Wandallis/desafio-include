@@ -6,8 +6,8 @@ function Home() {
   return (
     
     <div className={styles.container}>
-      <Navbar/>
       
+      <Navbar/>
       <div className={styles.main}>
         <div className={styles.banner}>
           <h1 className={styles.bannerTitle}>Avalie seu game</h1>

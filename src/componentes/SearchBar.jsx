@@ -15,7 +15,7 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: "flex" }}>
+    <form onSubmit={handleSubmit} style={{ display: "flex", flex: "2", maxWidth: "600px", justifyContent: "flex-end", alignItems: "center", height: "100%" }}>
       <input
         type="text"
         placeholder="Pesquisar..."
@@ -25,7 +25,12 @@ function SearchBar({ onSearch }) {
           padding: "0.5em",
           borderRadius: "4px 0 0 4px",
           border: "1px solid #ccc",
-          outline: "none"
+          outline: "none",
+          width: "100%",
+          
+          height: "100%",
+          maxHeight: "35px",
+          
         }}
       />
       <button
@@ -36,7 +41,9 @@ function SearchBar({ onSearch }) {
           borderRadius: "0 4px 4px 0",
           background: "#00ffcc",
           color: "#111",
-          cursor: "pointer"
+          cursor: "pointer",
+          height: "100%",
+          maxHeight: "35px"
         }}
       >
         Buscar
