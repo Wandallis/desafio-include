@@ -11,13 +11,12 @@
     margin-bottom: 30px;
     padding-right: 40px;
     padding-left: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: flex-start;
-    
-    
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: start; /* garante alinhamento à esquerda */
+    gap: 20px;
+
+
 }
 .card {
     display: flex;
@@ -26,10 +25,10 @@
     width: 200px;
     height: auto;
     padding: 16px;
-
-    flex: 1 1 250px; /* flex-grow, flex-shrink, flex-basis */
-      min-width: 250px;
-      max-width: 300px;
+    
+    flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
+    min-width: 300px;
+    max-width: 300px;
     
     background-color: #fff;
     border: 1px solid #ddd;
@@ -60,4 +59,12 @@
     font-size: 1rem;
     color: #666;
     text-align: center;
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+    white-space: normal;
 }
+
