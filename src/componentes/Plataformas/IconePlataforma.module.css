@@ -1,0 +1,15 @@
+.iconsBox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: start;
+  margin-top: 8px;
+}
+
+.iconsBox svg {
+  transition: transform 0.2s ease;
+}
+
+.iconsBox svg:hover {
+  transform: scale(1.15);
+}

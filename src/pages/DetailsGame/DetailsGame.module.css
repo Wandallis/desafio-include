@@ -1,0 +1,189 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.main {
+    flex-grow: 1;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    gap: 40px;
+}
+
+/* CORREÇÃO PRINCIPAL AQUI */
+.blocoDescricoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Mantém duas colunas */
+    border-radius: 12px;
+    /* REMOVE height: 500px - isso estava causando o problema */
+    min-height: 300px; /* Altura mínima em vez de fixa */
+    background-color: #222;
+    gap: 20px;
+    align-items: start; /* Alinha os itens no topo */
+}
+
+/* CORREÇÃO DA IMAGEM */
+.image {
+    width: 100%;
+    height: 100%; /* Ocupa 100% da altura da célula do grid */
+    
+     /* Altura máxima para não ficar gigante */
+    object-fit: cover; /* Mantém a proporção e cobre o espaço */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    color: white;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.genre {
+  font-size: 1.1rem;
+  color: #888; /* mesma cor do botão, para manter identidade visual */
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: start;
+  font-style: italic;
+  margin-bottom: 6px;
+
+}
+
+.releaseDate {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 12px;
+}
+
+/* CORREÇÃO DA DESCRIÇÃO */
+.description {
+    font-size: 1rem;
+    color: #ccc;
+    text-align: start;
+    max-width: 100%;
+    margin-top: 10px;
+    padding-right: 20px;
+    /* REMOVE todas estas propriedades que limitam o texto */
+    overflow: visible;
+    text-overflow: unset;
+    display: block;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+.blocoInserirAvaliacao{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+
+.blocoIconeAvaliacao{
+    display: grid;
+    width: 100%;
+    justify-content: end;
+    padding-right: 20px;
+}
+
+.avaliacaoDetalhes{
+    width: 80px;
+    
+    min-height: 70px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+
+
+/* Blocos adicionais responsivos */
+.infoBlocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.block {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: #ff4b2b;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.backButton:hover {
+    background-color: #ff1f1f;
+}
+
+/* Responsividade melhorada */
+@media (max-width: 1127px) {
+    .main {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .blocoDescricoes {
+        grid-template-columns: 1fr; /* Empilha em mobile */
+        gap: 15px;
+    }
+    
+    .image {
+        max-height: 600px; /* Reduz altura máxima em mobile */
+    }
+    
+    .info {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Para telas muito grandes */
+@media (min-width: 1200px) {
+    .blocoDescricoes {
+        grid-template-columns: 40% 60%; /* Proporção diferente para telas grandes */
+    }
+}

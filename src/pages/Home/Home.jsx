@@ -1,7 +1,7 @@
-import Navbar from "../../componentes/Navbar"
+import Navbar from "../../componentes/Navbar/Navbar"
 import styles from "./Home.module.css"
-import Footer from "../../componentes/Footer"
-import GameCard from "../../componentes/GameCard"
+import Footer from "../../componentes/Footer/Footer"
+import GameCard from "../../componentes/GameCard/GameCard"
 import gamesData from "../../Data/GamesData"
 function Home() {
   return (
@@ -10,10 +10,14 @@ function Home() {
       
       <Navbar/>
       <div className={styles.main}>
+        
+
         <div className={styles.banner}>
           <h1 className={styles.bannerTitle}>Avalie seu game</h1>
           <p className={styles.bannerSubtitle}>Descubra, avalie e compartilhe suas experiências de jogos!</p>
         </div>
+
+        
         <GameCard cards={gamesData} />
         
       </div>

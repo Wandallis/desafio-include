@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.cards {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-items: start; /* garante alinhamento à esquerda */
+    gap: 20px;
+    
+
+
+}
+.card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+    background-color: #e6e6e6;
+    flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
+    border: 0.5px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.cardLink {
+  text-decoration: none; /* remove o sublinhado */
+  color: inherit; /* herda a cor do texto */
+  outline: none; /* remove o contorno de foco */
+}
+
+
+
+
+.image {
+    width: 100%;
+    height: 300px;         /* altura fixa para manter uniformidade */
+    object-fit: cover;     /* corta a imagem para preencher o espaço sem distorcer */
+    border-radius: 8px;
+}
+
+.blocoPrincipal{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  margin-top: 5px;
+  height: auto;
+  min-height: 100px;
+  align-items: stretch; /* faz o ícone ter a mesma altura da coluna da esquerda */
+  background: #e6e6e6;
+  
+  padding-left: 15px;
+  padding-right: 15px;
+  
+  border-radius: 12px;
+  
+}
+
+.titleAvaliacao{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  
+    
+}
+
+.title {
+    text-align: start;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical; 
+    white-space: normal;
+}
+.iconBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    border-left: 2px solid #333;
+}
+
+
+.blocoDescricao{
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+
+}
+.description {
+    font-size: 1rem;
+    color: #666;
+    text-align: start;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; 
+    white-space: normal;
+    
+}
+
+.blocoPlataforma{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding-bottom: 5px;
+    margin-top: 5px;
+   
+    height: 30px;
+    width: 100%;
+}
+
+
+
+.iconsBox {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.iconsBox svg {
+  transition: transform 0.2s ease;
+}
+
+.iconsBox svg:hover {
+  transform: scale(1.2);
+}
+
+.genre {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+
