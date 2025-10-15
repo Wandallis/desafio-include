@@ -22,27 +22,25 @@ html, body {
     align-items: stretch;
     padding: 20px;
     gap: 40px;
+    margin-bottom: 200px;
 }
 
-/* CORREÇÃO PRINCIPAL AQUI */
 .blocoDescricoes {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Mantém duas colunas */
+    grid-template-columns: 1fr 1fr;
     border-radius: 12px;
-    /* REMOVE height: 500px - isso estava causando o problema */
-    min-height: 300px; /* Altura mínima em vez de fixa */
+    min-height: 300px;
     background-color: #222;
     gap: 20px;
-    align-items: start; /* Alinha os itens no topo */
+    align-items: start;
+    
 }
 
-/* CORREÇÃO DA IMAGEM */
 .image {
     width: 100%;
-    height: 100%; /* Ocupa 100% da altura da célula do grid */
-    
-     /* Altura máxima para não ficar gigante */
-    object-fit: cover; /* Mantém a proporção e cobre o espaço */
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
@@ -62,23 +60,20 @@ html, body {
 }
 
 .genre {
-  font-size: 1.1rem;
-  color: #888; /* mesma cor do botão, para manter identidade visual */
-  font-weight: 600;
-  margin-bottom: 10px;
-  text-align: start;
-  font-style: italic;
-  margin-bottom: 6px;
-
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-align: start;
+    font-style: italic;
 }
 
 .releaseDate {
-  font-size: 1rem;
-  color: #ddd;
-  margin-bottom: 12px;
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 12px;
 }
 
-/* CORREÇÃO DA DESCRIÇÃO */
 .description {
     font-size: 1rem;
     color: #ccc;
@@ -86,7 +81,6 @@ html, body {
     max-width: 100%;
     margin-top: 10px;
     padding-right: 20px;
-    /* REMOVE todas estas propriedades que limitam o texto */
     overflow: visible;
     text-overflow: unset;
     display: block;
@@ -94,166 +88,168 @@ html, body {
     line-height: 1.5;
 }
 
-.blocoInserirAvaliacao{
+.blocoInserirAvaliacao {
     display: flex;
     gap: 20px;
     padding-top: 20px;
     width: 100%;
     
-    
-    
-    
 }
 
-.blocoIconeAvaliacao{
+.blocoIconeAvaliacao {
     display: grid;
     justify-content: start;
     padding-right: 20px;
 }
 
-.avaliacaoDetalhes{
+.avaliacaoDetalhes {
     width: 80px;
     height: 70px;
     flex-shrink: 0;
     border-radius: 8px;
-    
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
 .botaoAdd {
-  background-color: #ff4b2b;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 14px;
-  width: 150px;
-  height: 70px;
-  font-weight: bold;
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-  justify-self: start;
+    background-color: #ff4b2b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    width: 150px;
+    height: 70px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    justify-self: start;
 }
 
 .botaoAdd:hover {
-  background-color: #ffdb4d;
+    background-color: #ffdb4d;
 }
 
-
-/* Modal */
 .modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
 
 .modalCard {
-  background-color: #1e1e1e;
-  color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  width: 320px;
-  text-align: center;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    width: 320px;
+    text-align: center;
 }
 
 .inputNota {
-  width: 80%;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #555;
-  background-color: #333;
-  color: white;
-  margin-top: 10px;
-  text-align: center;
+    width: 80%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .modalBotoes {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .botaoSalvar {
-  background-color: #28a745;
-  border: none;
-  padding: 8px 14px;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
+    background-color: #28a745;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .botaoSalvar:hover {
-  background-color: #32d14a;
+    background-color: #32d14a;
 }
 
 .botaoCancelar {
-  background-color: #dc3545;
-  border: none;
-  padding: 8px 14px;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
+    background-color: #dc3545;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .botaoCancelar:hover {
-  background-color: #ff4659;
+    background-color: #ff4659;
 }
 
+.blockReview {
+    width: 100%;
+    height: 20px;
+}
 
+.titleReview {
+    font-size: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Bebas Neue", sans-serif;
+}
 
-
-/* Blocos adicionais responsivos */
 .infoBlocks {
-  display: grid;
-  /* Deixe as colunas flexíveis com minmax mínimo de 250px */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 0.5fr));
+    padding-top: 20px;
+    border-top: 2px solid #222;
+    gap: 1.5rem;
 }
 
 .block {
-  background-color: #1f1f1f;
-  border: 1px solid #333;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  /* Permite que o card cresça de acordo com o conteúdo */
-  display: flex;
-  flex-direction: column;
-  word-wrap: break-word; /* Quebra palavras longas */
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
 }
 
 .block:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
-
 .nomeUsuario {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #ffcc00;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffcc00;
 }
 
 .comentarioTexto {
-  font-size: 0.95rem;
-  color: #ddd;
-  margin-top: 10px;
-  line-height: 1.4;
-  text-align: start;
-  white-space: pre-wrap; /* Mantém quebras de linha do texto */
-  word-break: break-word; /* Quebra palavras longas para não estourar o card */
+    font-size: 0.95rem;
+    color: #ddd;
+    margin-top: 10px;
+    line-height: 1.4;
+    text-align: start;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 .textareaComentario {
@@ -268,7 +264,6 @@ html, body {
     resize: none;
 }
 
-/* Ajuste dos blocos de review */
 .block {
     background-color: #1f1f1f;
     border: 1px solid #333;
@@ -299,34 +294,40 @@ html, body {
     background-color: #ff1f1f;
 }
 
-/* Responsividade melhorada */
 @media (max-width: 1127px) {
     .main {
         width: 95%;
         padding: 10px;
     }
-    
+
     .blocoDescricoes {
-        grid-template-columns: 1fr; /* Empilha em mobile */
+        grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .image {
-        max-height: 600px; /* Reduz altura máxima em mobile */
+        max-height: 600px;
     }
-    
+
     .info {
         padding: 15px;
     }
-    
+
     .title {
         font-size: 1.5rem;
     }
+
+    .infoBlocks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        padding-top: 20px;
+        border-top: 2px solid #222;
+        gap: 1.5rem;
+    }
 }
 
-/* Para telas muito grandes */
 @media (min-width: 1200px) {
     .blocoDescricoes {
-        grid-template-columns: 40% 60%; /* Proporção diferente para telas grandes */
+        grid-template-columns: 40% 60%;
     }
 }

@@ -1,113 +1,114 @@
 html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif; /* moderna e legível */
-  background-color: #0f1116;
-  color: #fff;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif; /* moderna e legível */
+	background-color: #0f1116;
+	color: #fff;
 }
 
 .container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
 }
 
 .main {
-  flex-grow: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #0f1116; /* fundo escuro elegante */
+	flex-grow: 1;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #0f1116; /* fundo escuro elegante */
 }
 
 /* BANNER */
 .banner {
-  background: linear-gradient(180deg, #14161c 0%, #0f1116 100%);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 60px;
-  height: 220px;
-  border-bottom: 2px solid #222;
+	background: linear-gradient(180deg, #14161c 0%, #0f1116 100%);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-left: 60px;
+	height: 200px;
+	border-bottom: 2px solid #222;
 }
 
 .bannerTitle {
-  font-size: 64px;
-  font-weight: 800;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: "Bebas Neue", sans-serif;
+	font-size: 64px;
+	font-weight: 800;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-family: "Bebas Neue", sans-serif;
 }
 
 .bannerSubtitle {
-  font-size: 20px;
-  color: #b3b3b3;
-  font-weight: 400;
-  margin-top: 8px;
-  font-family: "Poppins", sans-serif;
+	font-size: 20px;
+	padding-bottom: 20px;
+	color: #b3b3b3;
+	font-weight: 400;
+	margin-top: 8px;
+	font-family: "Poppins", sans-serif;
 }
 
 /* Ajuste para os cards */
 .main :global(.gameCard) {
-  background-color: #1b1d24;
-  color: white;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+	background-color: #1b1d24;
+	color: white;
+	border-radius: 10px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .main :global(.gameCard:hover) {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 20px rgba(255, 187, 51, 0.2);
+	transform: translateY(-6px);
+	box-shadow: 0 6px 20px rgba(255, 187, 51, 0.2);
 }
 
 @media (max-width: 1024px) {
-  .banner {
-    padding-left: 40px;
-    height: 180px;
-  }
+	.banner {
+		padding-left: 40px;
+		height: 180px;
+	}
 
-  .bannerTitle {
-    font-size: 48px;
-  }
+	.bannerTitle {
+		font-size: 48px;
+	}
 
-  .bannerSubtitle {
-    font-size: 18px;
-  }
+	.bannerSubtitle {
+		font-size: 18px;
+	}
 }
 
 @media (max-width: 768px) {
-  .banner {
-    padding-left: 30px;
-    height: 160px;
-  }
+	.banner {
+		padding-left: 30px;
+		height: 160px;
+	}
 
-  .bannerTitle {
-    font-size: 36px;
-  }
+	.bannerTitle {
+		font-size: 36px;
+	}
 
-  .bannerSubtitle {
-    font-size: 16px;
-  }
+	.bannerSubtitle {
+		font-size: 16px;
+	}
 }
 
 @media (max-width: 480px) {
-  .banner {
-    padding-left: 20px;
-    height: 140px;
-    padding-right: 20px;
-  }
+	.banner {
+		padding-left: 20px;
+		height: 140px;
+		padding-right: 20px;
+	}
 
-  .bannerTitle {
-    font-size: 28px;
-  }
+	.bannerTitle {
+		font-size: 28px;
+	}
 
-  .bannerSubtitle {
-    font-size: 14px;
-  }
+	.bannerSubtitle {
+		font-size: 14px;
+	}
 }

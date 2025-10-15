@@ -58,7 +58,66 @@ const gamesData = [
     genre: "Party Game / Dedução Social",
     releaseDate: "15 de junho de 2018",
     nota: 2 ,
-  }
+  },{
+		id: "godofwar",
+		title: "God of War",
+		description:
+			"God of War reinventa a mitologia nórdica com uma narrativa intensa e combate visceral. Kratos e Atreus embarcam em uma jornada de redenção e descoberta.",
+		imageUrl:
+			"https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg",
+		plataform: ["playstation"],
+		genre: "Ação / Aventura",
+		releaseDate: "20 de abril de 2018",
+		nota: 10,
+	},
+	{
+		id: "cyberpunk2077",
+		title: "Cyberpunk 2077",
+		description:
+			"Cyberpunk 2077 é um RPG de mundo aberto futurista, com personalização intensa, narrativa complexa e exploração urbana em Night City.",
+		imageUrl:
+			"https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg",
+		plataform: ["pc", "xbox", "playstation"],
+		genre: "RPG / Ação",
+		releaseDate: "10 de dezembro de 2020",
+		nota: 7,
+	},
+	{
+		id: "horizonzerodawn",
+		title: "Horizon Zero Dawn",
+		description:
+			"Horizon Zero Dawn combina exploração em mundo aberto com combate contra máquinas futuristas em um mundo pós-apocalíptico.",
+		imageUrl:
+			"https://upload.wikimedia.org/wikipedia/pt/d/d0/Horizon_Zero_Dawn_capa.png",
+		plataform: ["playstation", "pc"],
+		genre: "Aventura / RPG",
+		releaseDate: "28 de fevereiro de 2017",
+		nota: 8,
+	},
+	{
+		id: "thewitcher3",
+		title: "The Witcher 3: Wild Hunt",
+		description:
+			"The Witcher 3 é um RPG épico com narrativa rica, escolhas impactantes e um mundo aberto repleto de monstros, política e intrigas.",
+		imageUrl:
+			"https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
+		plataform: ["pc", "playstation", "xbox"],
+		genre: "RPG / Ação",
+		releaseDate: "19 de maio de 2015",
+		nota: 10,
+	},
+	{
+		id: "resident-evil-village",
+		title: "Resident Evil Village",
+		description:
+			"Resident Evil Village mistura horror de sobrevivência com ação intensa, apresentando uma história sombria e inimigos assustadores.",
+		imageUrl:
+			"https://xboxwire.thesourcemediaassets.com/sites/8/2021/01/Village-Key-Art-1_1920x1080.jpg",
+		plataform: ["pc", "playstation", "xbox"],
+		genre: "Horror / Ação",
+		releaseDate: "7 de maio de 2021",
+		nota: 9,
+	},
 ];
 
 export default gamesData;
