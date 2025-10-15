@@ -23,7 +23,7 @@ function GameCard({ cards }) {
                 <p className={GameCardCSS.genre}>{card.genre}</p>  
               </div>
               <div className={GameCardCSS.iconBox}>
-                <IconeAvaliacao  nota={3}/>
+                <IconeAvaliacao  nota={card.nota}/>
               </div>
             </div>
 

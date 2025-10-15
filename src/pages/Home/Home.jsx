@@ -3,12 +3,18 @@ import styles from "./Home.module.css"
 import Footer from "../../componentes/Footer/Footer"
 import GameCard from "../../componentes/GameCard/GameCard"
 import gamesData from "../../Data/GamesData"
+import { useState } from "react"
 function Home() {
+
+  const [buscar, setBuscar] = useState(""); 
+  const filterGame = gamesData.filter((game) => 
+    game.title.toLowerCase().includes(buscar.toLowerCase())
+  );
   return (
     
     <div className={styles.container}>
       
-      <Navbar/>
+      <Navbar buscar = {buscar} setBuscar = {setBuscar}/>
       <div className={styles.main}>
         
 
@@ -18,7 +24,7 @@ function Home() {
         </div>
 
         
-        <GameCard cards={gamesData} />
+        <GameCard cards={filterGame} />
         
       </div>
       <Footer />

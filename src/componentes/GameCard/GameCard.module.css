@@ -1,60 +1,59 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;800&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .cards {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-right: 40px;
-    padding-left: 40px;
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    justify-items: start; /* garante alinhamento à esquerda */
-    gap: 20px;
-    
-
-
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: start;
+  gap: 20px;
 }
+
+/* CARD GERAL */
 .card {
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
-    align-items: center;
-    height:100%;
-    background-color: #e6e6e6;
-    flex: 1 1 300px; /* flex-grow, flex-shrink, flex-basis */
-    border: 0.5px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: #1b1d24;
+  border: 1px solid #2a2d36;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 187, 51, 0.15);
 }
 
+/* LINK */
 .cardLink {
-  text-decoration: none; /* remove o sublinhado */
-  color: inherit; /* herda a cor do texto */
-  outline: none; /* remove o contorno de foco */
+  text-decoration: none;
+  color: inherit;
+  outline: none;
 }
 
-
-
-
+/* IMAGEM */
 .image {
-    width: 100%;
-    height: 300px;         /* altura fixa para manter uniformidade */
-    object-fit: cover;     /* corta a imagem para preencher o espaço sem distorcer */
-    border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
-.blocoPrincipal{
+/* BLOCO PRINCIPAL (título + nota) */
+.blocoPrincipal {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -62,103 +61,110 @@
   margin-top: 5px;
   height: auto;
   min-height: 100px;
-  align-items: stretch; /* faz o ícone ter a mesma altura da coluna da esquerda */
-  background: #e6e6e6;
-  
-  padding-left: 15px;
-  padding-right: 15px;
-  
-  border-radius: 12px;
-  
+  align-items: stretch;
+  background: #1b1d24;
+  padding: 12px 15px;
+  border-radius: 0 0 10px 10px;
 }
 
-.titleAvaliacao{
+/* TÍTULO E GÊNERO */
+.titleAvaliacao {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  
-    
 }
 
 .title {
-    text-align: start;
-    font-size: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; 
-    -webkit-box-orient: vertical; 
-    white-space: normal;
-}
-.iconBox{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 12px;
-    border-left: 2px solid #333;
-}
-
-
-.blocoDescricao{
-    display: flex;
-    padding: 5px;
-    flex-direction: column;
-    align-items: center;
-
-}
-.description {
-    font-size: 1rem;
-    color: #666;
-    text-align: start;
-    padding-left: 15px;
-    padding-right: 15px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; 
-    -webkit-box-orient: vertical; 
-    white-space: normal;
-    
-}
-
-.blocoPlataforma{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-around;
-    padding-bottom: 5px;
-    margin-top: 5px;
-   
-    height: 30px;
-    width: 100%;
-}
-
-
-
-.iconsBox {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 8px;
-}
-
-.iconsBox svg {
-  transition: transform 0.2s ease;
-}
-
-.iconsBox svg:hover {
-  transform: scale(1.2);
+  font-family: "Bebas Neue", sans-serif;
+  text-align: start;
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .genre {
+  font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
-  color: #888;
+  color: #bbbbbb;
   font-style: italic;
   margin-top: 4px;
-  margin-bottom: 6px;
-  text-align: center;
 }
 
+/* ÍCONE DE AVALIAÇÃO */
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 12px;
+  border-left: 2px solid #333;
+}
 
+/* DESCRIÇÃO */
+.blocoDescricao {
+  display: flex;
+  padding: 8px 15px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #16171c;
+}
+
+.description {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #cccccc;
+  text-align: start;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* PLATAFORMAS */
+.blocoPlataforma {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+  margin-top: 10px;
+  height: 35px;
+  width: 100%;
+  background-color: #1b1d24;
+  border-top: 1px solid #2a2d36;
+}
+
+.blocoPlataforma svg {
+  
+  font-size: 1.3rem;
+  color: #b3b3b3;
+  transition: color 0.3s ease;
+}
+
+.blocoPlataforma svg:hover {
+  color: #ffbb33;
+}
+
+/* EFEITO DE AVALIAÇÃO */
+.iconBox :global(.nota) {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: #00c853; /* verde */
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(0, 200, 83, 0.5);
+}

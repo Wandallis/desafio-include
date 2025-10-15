@@ -13,6 +13,7 @@ export default function IconeAvaliacao({ nota, className }) {
       className={`${styles.container} ${className || ""}`}
       style={{ backgroundColor: getCorDeFundo(nota) }}
     >
+      <span className={styles.label}>NOTA</span>
       <h1>{nota}</h1>
     </div>
   );

@@ -9,6 +9,7 @@ const gamesData = [
     plataform: ["nintendo"],
     genre: "Aventura / Mundo Aberto",
     releaseDate: "03 de março de 2017",
+    nota: 9 ,
   },
   {
     id: "mario",
@@ -20,6 +21,7 @@ const gamesData = [
     plataform: ["nintendo"],
     genre: "Plataforma / Aventura",
     releaseDate: "27 de outubro de 2017",
+    nota: 7 ,
   },
   {
     id: "minecraft",
@@ -31,6 +33,7 @@ const gamesData = [
     plataform: ["pc", "xbox", "playstation", "nintendo"],
     genre: "Sandbox / Sobrevivência",
     releaseDate: "18 de novembro de 2011",
+    nota: 6 ,
   },
   {
     id: "fortnite",
@@ -42,6 +45,7 @@ const gamesData = [
     plataform: ["pc", "xbox", "playstation", "nintendo"],
     genre: "Battle Royale / Ação",
     releaseDate: "21 de julho de 2017",
+    nota: 4 ,
   },
   {
     id: "amongus",
@@ -53,7 +57,8 @@ const gamesData = [
     plataform: ["pc", "xbox", "playstation", "nintendo"],
     genre: "Party Game / Dedução Social",
     releaseDate: "15 de junho de 2018",
-  },
+    nota: 2 ,
+  }
 ];
 
 export default gamesData;
