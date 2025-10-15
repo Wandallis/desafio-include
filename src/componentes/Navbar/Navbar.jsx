@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import styles from "./Navbar.module.css";
 import SearchBar from "../SearchBar/SearchBar";
-import logoimg from "../../midias/logoimage.png";
+import logoimg from "../../assets/logoimage.png";
 import Button from "../Button/Button";
 
 export default function Navbar({ buscar, setBuscar }) {

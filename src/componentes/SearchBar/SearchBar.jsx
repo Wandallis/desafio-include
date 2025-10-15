@@ -40,6 +40,7 @@ function SearchBar({ buscar, setBuscar }) {
           borderRadius: "0 4px 4px 0",
           background: "#ffbb33",
           color: "#111",
+          height: "100%",
           cursor: "pointer",
           
           

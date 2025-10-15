@@ -15,6 +15,7 @@ export default function PageDetailsGame() {
 		{ usuario: "Você", nota: game.nota, comentario: "Minha avaliação inicial." },
 	]);
 
+	const [novoUsuario, setNovoUsuario] = useState("");
 	const [novaNota, setNovaNota] = useState("");
 	const [novoComentario, setNovoComentario] = useState("");
 	const [mostrarModal, setMostrarModal] = useState(false);
@@ -39,7 +40,8 @@ export default function PageDetailsGame() {
 		if (!novaNota || novaNota < 0 || novaNota > 10 || !novoComentario.trim()) return;
 
 		const novaAvaliacao = {
-			usuario: `Usuário ${avaliacoes.length}`,
+
+			usuario: novoUsuario,
 			nota: Number(novaNota),
 			comentario: novoComentario,
 		};
@@ -100,6 +102,13 @@ export default function PageDetailsGame() {
 							<h2>Adicionar Avaliação</h2>
 
 							<form onSubmit={adicionarAvaliacao}>
+								<input
+									type="text"
+									placeholder="Seu nome"
+									value={novoUsuario}
+									onChange={(e) => setNovoUsuario(e.target.value)}
+									className={styles.inputNota}
+								/>
 								<input
 									type="number"
 									placeholder="Nota (0 a 10)"
